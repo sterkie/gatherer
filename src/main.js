@@ -3,9 +3,12 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store/";
 import { auth } from "./firebase";
+import DateFilter from "./filters/date";
 
 // MAIN CSS + BULMA OVERRIDES
 import "./assets/main.scss";
+
+Vue.filter("date", DateFilter);
 
 new Vue({
   router,

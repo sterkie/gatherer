@@ -1,8 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-// Styles
-
 import Home from "./containers/Home.vue";
 import Dashboard from "./containers/Dashboard.vue";
 import Register from "./containers/Register.vue";

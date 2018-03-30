@@ -28,8 +28,12 @@ const actions = {
       status: payload.status
     };
     db.ref(`/events/${eventId}`).update(newEvent);
-    // compose creator object with ID and name
-    const creator = { id: getters.user.id, name: getters.user.name };
+    // compose creator object with ID, name and empty availableDates array
+    const creator = {
+      id: getters.user.id,
+      name: getters.user.name,
+      availableDates: []
+    };
     // get ref for participants and initialize them with the event creator
     const paRef = db.ref(`/events/${eventId}/participants/${getters.user.id}`);
     paRef.update(creator);

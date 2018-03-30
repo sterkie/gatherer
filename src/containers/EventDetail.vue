@@ -3,6 +3,7 @@
         <div v-if="event">
             details page for {{event.title}}
         </div>
+        <DateDecider :participants="participants" :suggestedDates="suggestedDates" v-if="event" />
     </div>
 </template>
 
