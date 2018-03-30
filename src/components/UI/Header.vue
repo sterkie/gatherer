@@ -49,4 +49,8 @@ export default {
 .beta {
   color: aqua;
 }
+
+.app-title {
+  margin-left: 16px;
+}
 </style>

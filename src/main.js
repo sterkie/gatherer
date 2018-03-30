@@ -14,7 +14,7 @@ new Vue({
   created() {
     auth.onAuthStateChanged(user => {
       if (user) {
-        // this.$store.dispatch("loadAllEvents");
+        this.$store.dispatch("loadAllEvents");
         this.$store.dispatch("autoLog", user);
         this.$store.dispatch("loadUserDetails");
       }

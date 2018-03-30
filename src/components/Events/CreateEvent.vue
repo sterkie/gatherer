@@ -50,8 +50,7 @@ export default {
         suggestedDates: this.newEvent.suggestedDates,
         status: "voting"
       };
-      //   this.$store.dispatch("createEvent", newEvent);
-      console.log(newEvent);
+      this.$store.dispatch("createEvent", newEvent);
     },
 
     cancelCreate() {
