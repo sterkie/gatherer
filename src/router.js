@@ -11,6 +11,7 @@ import UserList from "./containers/UserList.vue";
 import UserDetail from "./containers/UserDetail.vue";
 import Events from "./containers/Events.vue";
 import CreateEvent from "./components/Events/CreateEvent.vue";
+import EventDetail from "./containers/EventDetail.vue";
 
 Vue.use(Router);
 
@@ -22,7 +23,8 @@ const routes = [
   { path: "/users", component: UserList },
   { path: "/users/:id", component: UserDetail },
   { path: "/events/create", component: CreateEvent },
-  { path: "/events", component: Events }
+  { path: "/events", component: Events },
+  { path: "/events/:id", component: EventDetail }
 ];
 
 export default new Router({

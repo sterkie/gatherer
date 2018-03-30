@@ -34,7 +34,9 @@ const actions = {
     const paRef = db.ref(`/events/${eventId}/participants/${getters.user.id}`);
     paRef.update(creator);
     //commit to vuex store
-    commit("createEvent", { ...newEvent, participants: [...creator] });
+    const participants = [];
+    participants.push(creator);
+    commit("createEvent", { ...newEvent, participants: participants });
   },
 
   loadAllEvents({ commit }) {
